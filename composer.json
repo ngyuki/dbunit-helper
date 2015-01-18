@@ -1,0 +1,10 @@
+{
+    "require": {
+        "phpunit/dbunit": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "ngyuki\\DbUnitHelper\\": "src/"
+        }
+    }
+}
