@@ -24,4 +24,22 @@ trait DbUnitTrait
      * @return PHPUnit_Extensions_Database_DB_IDatabaseConnection
      */
     abstract protected function getConnection();
+
+    /**
+     * @param $yaml
+     * @return \PHPUnit_Extensions_Database_DataSet_YamlDataSet
+     */
+    public static function createYamlDataSet($yaml)
+    {
+        return DbUnitUtil::createYamlDataSet($yaml);
+    }
+
+    /**
+     * @param $yaml
+     * @return \PHPUnit_Extensions_Database_DataSet_YamlDataSet
+     */
+    public static function createYamlDataSetByInline($yaml)
+    {
+        return DbUnitUtil::createYamlDataSetByInline($yaml);
+    }
 }

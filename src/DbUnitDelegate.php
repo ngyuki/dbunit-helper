@@ -52,4 +52,22 @@ class DbUnitDelegate extends PHPUnit_Extensions_Database_DefaultTester
 
         return new \PHPUnit_Extensions_Database_DataSet_DefaultDataSet();
     }
+
+    /**
+     * @param $yaml
+     * @return \PHPUnit_Extensions_Database_DataSet_YamlDataSet
+     */
+    public static function createYamlDataSet($yaml)
+    {
+        return DbUnitUtil::createYamlDataSet($yaml);
+    }
+
+    /**
+     * @param $yaml
+     * @return \PHPUnit_Extensions_Database_DataSet_YamlDataSet
+     */
+    public static function createYamlDataSetByInline($yaml)
+    {
+        return DbUnitUtil::createYamlDataSetByInline($yaml);
+    }
 }

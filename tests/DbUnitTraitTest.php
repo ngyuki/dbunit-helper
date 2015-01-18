@@ -24,18 +24,10 @@ class DbUnitTraitTest extends AbstractTestCase
 
     public function fooDataSet()
     {
-        $yaml = "
+        return $this->dbunit->createYamlDataSetByInline("
             t:
               - id: 1
               - id: 2
-        ";
-
-        $yaml = preg_replace_callback('/^ +/sm', function ($m) {
-            static $n;
-            $n = $n ? $n : strlen($m[0]);
-            return substr($m[0], $n);
-        }, $yaml);
-
-        return new \PHPUnit_Extensions_Database_DataSet_YamlDataSet($yaml);
+        ");
     }
 }
